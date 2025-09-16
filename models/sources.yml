@@ -1,18 +1,27 @@
+version: 2
 
 sources:
   - name: raw
     database: FUSION_UPGRADE_DB
     schema: RAW
+    description: >
+      The RAW schema contains raw sales data ingested from regional systems
+      before any transformations are applied.
     tables:
       - name: us_west_sales
-        config:
-          freshness: 
+        description: >
+          Sales transactions originating from the US West region. 
+          This table is expected to receive new data very frequently.
+        freshness:
           error_after:
             count: 1
-            period: minute 
+            period: minute
+
       - name: us_east_sales
-        config:
-          freshness: 
+        description: >
+          Sales transactions originating from the US East region.
+          This table updates less frequently than the US West sales data.
+        freshness:
           error_after:
             count: 1
-            period: day 
+            period: day
