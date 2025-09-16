@@ -4,4 +4,15 @@ sources:
     database: FUSION_UPGRADE_DB
     schema: RAW
     tables:
-      - name: us_sales
+      - name: us_west_sales
+        config:
+          freshness: 
+          warn_after:
+            count: 1
+            period: minute 
+      - name: us_east_sales
+        config:
+          freshness: 
+          warn_after:
+            count: 1
+            period: day 
