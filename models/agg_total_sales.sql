@@ -14,7 +14,7 @@ us_east as (
     select
         region,
         amount
-    from {{ ref('stg_east_sales') }}
+    from {{ ref('stg_west_sales') }}
 
 ),
 
