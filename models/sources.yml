@@ -7,12 +7,12 @@ sources:
       - name: us_west_sales
         config:
           freshness: 
-          warn_after:
+          error_after:
             count: 1
             period: minute 
       - name: us_east_sales
         config:
           freshness: 
-          warn_after:
+          error_after:
             count: 1
             period: day 
