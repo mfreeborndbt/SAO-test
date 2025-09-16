@@ -1,0 +1,7 @@
+
+sources:
+  - name: raw
+    database: FUSION_UPGRADE_DB
+    schema: RAW
+    tables:
+      - name: us_sales
