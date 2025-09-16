@@ -1,6 +1,6 @@
 with src as (
     select *
-    from {{ ref('stg_raw__us_sales') }}
+    from {{ ref('stg_west_sales') }}
     where upper(region) = 'WEST'
 ),
 
